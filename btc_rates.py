@@ -3,7 +3,7 @@ import json
 import boto3
 
 # Initialize a session using Amazon S3
-# In Linux, it will recoginize the credentials folder we created
+# Your opterating system will know the credentials if you saved them correctly
 s3 = boto3.client('s3')
 
 # Specify the name of your bucket
@@ -17,7 +17,7 @@ s3_object_historical_key = f'folder2/btc_rate_[{current_time}].json'
 
 try:
     # I have a function to get the BTC price, but for this example, I will hard code it
-    rates = 50000.00
+    rate = 50000.00
     # Create dictionaries, add rate data, and convert to json
     btc_rate_current = {}
     btc_rate_current_historical = {}
